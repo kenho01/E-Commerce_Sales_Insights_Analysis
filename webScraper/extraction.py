@@ -2,57 +2,52 @@ from scraper import Scraper
 import json
 import glob
 import os
+from datetime import datetime
 
 scraper = Scraper()
 
-def combine_json_files(input_dir, output_file):
-        combined_data = []
+genders = ['men', 'women']
+categories = ["clothing", "shoes", "sports"]
+men_brands_clothes = ["cos", "superdry", "calvin-klein", "hm", "oxgn"]
+men_brands_shoes  = ['vans', 'aldo', 'birkenstock', 'converse', 'dr-martens']
+brands_sports = ['adidas', 'under-armour', 'nike', 'puma', 'new-balance']
+women_brands_clothes = ['cos', 'calvin-klein', 'hm', 'oxgn', 'seasalt-cornwall']
+women_brands_shoes = ['aldo', 'betsy', 'birkenstock', 'converse', 'call-it-spring']
+occasions = ["Casual", "Activewear", "Workwear"]
 
-        # Find all JSON files in the input directory
-        for file_name in glob.glob(os.path.join(input_dir, '*.json')):
-            with open(file_name, 'r') as f:
-                data = json.load(f)
-                if isinstance(data, list):  
-                    combined_data.extend(data)
-                else:
-                    combined_data.append(data)
-    
-        # Write combined data to the output file
-        with open(output_file, 'w') as f:
-            json.dump(combined_data, f, indent=4)
+items = []
 
-# Possible parameters
-# gender = ('men', 'women')
-# product = ('clothing', 'shoes', 'accessories', 'bags', 'sports', 'modest-wear', 'men-s-care', 'beauty') <- #beauty for women's collections
-# brand = 
-# occasion = ('Activewear', 'Casual', 'Special+Occasion', 'Workwear')
+for j in men_brands_clothes:
+    for k in occasions:
+        t = ("men", "clothing", j , k)
+        items.append(t)
+        
+for j in men_brands_shoes:
+    for k in occasions:
+        t = ("men", "shoes", j , k)
+        items.append(t)
 
-# For this project, we'll narrow down the things to scrape to be men's sportswear and gear
+for j in women_brands_clothes:
+    for k in occasions:
+        t = ("women", "clothing", j , k)
+        items.append(t)
+for j in women_brands_shoes:
+    for k in occasions:
+        t = ("women", "shoes", j , k)
+        items.append(t)
 
-# Initialize a list to store things to scrape
-# List of brands = nike, adidas, new-balance, puma, underarmour, 2xu, 
-# Product = clothing, shoes, bags
-items_attributes = [
-    ("men", "clothing", "nike", "Activewear"), 
-    ("men", "clothing", "adidas", "Activewear"),
-    ("men", "clothing", "nike", "Casual"),
-    ("men", "clothing", "puma", "Activewear"),
-    ("men", "clothing", "new-balance", "Casual"),
-    ("men", "clothing", "new-balance", "Activewear"),
-    ("men", "shoes", "new-balance", "Casual"),
-    ("men", "shoes", "adidas", "Activewear"),
-]
+for i in genders:
+    for j in brands_sports:
+        for k in occasions:
+            t = (i, "sports", j, k)
+            items.append(t)
 
 # Begin the scrape 
-for i in items_attributes:
+for i in items:
+    print(i[1], i[2])
     scraper.scrape(
         gender=i[0],
         product=i[1],
         brand=i[2],
         occassion=i[3]
     )
-
-input_directory = './results'
-output_directory = './final_results'
-combine_json_files(input_directory,output_directory)
-

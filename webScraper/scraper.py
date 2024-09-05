@@ -33,9 +33,6 @@ class Scraper():
         url = f"{self.root_url}/{gender}/{product}/{brand}/?occasion={occassion}"
         text = requests.get(url, headers=self.headers).text
 
-        # Test
-        print(text)
-
         brand_idx = text.index("brandIds")
         brand_code = int(
             re.match("^([0-9]+)", text[brand_idx+15:]).groups()[0])
@@ -86,8 +83,7 @@ class Scraper():
                 "sku": x["meta"]["sku"],
                 "name": x["meta"]["name"],
                 "actual_price": x["meta"]["price"],
-                "discounted_price": x["meta"]["special_price"],
-                "image": x["image"],
+                "discounted_price": x["meta"]["special_price"]
             } for x in results]
             return results
         except Exception as e:
