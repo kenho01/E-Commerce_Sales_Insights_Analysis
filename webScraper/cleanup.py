@@ -25,8 +25,7 @@ import os
 
 def combined_json_files():
     current_date = datetime.now().strftime("%d_%m_%Y")
-    folder_path = "results"
-    json_files = glob.glob(f"{folder_path}/*.json")
+    json_files = glob.glob(f"*.json")
     objects = []
     for json_file in json_files:
         with open(json_file, "r") as f:
@@ -42,5 +41,7 @@ def remove_subresults():
         if os.path.isfile(file_path): 
             os.remove(file_path)
 
+print("combining json files:")
 combined_json_files()
+print("removing sub results:")
 remove_subresults()

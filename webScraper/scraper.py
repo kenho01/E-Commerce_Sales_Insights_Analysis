@@ -89,7 +89,7 @@ class Scraper():
         except Exception as e:
             print(e)
             return []
-        
+    
     def scrape(self, gender, product, brand, occassion, batch_size=100, identifier="sku"):
         print("\n\t[ZALORA SCRAPER TOOL]\n")
         ts_start = time.time()

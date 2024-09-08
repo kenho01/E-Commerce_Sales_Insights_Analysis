@@ -1,2 +1,5 @@
 ecommerce/
 *.json
+.DS_Store
+*.pyc
+.env
