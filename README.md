@@ -10,7 +10,9 @@ This frequent and diverse array of sales events has made it difficult for consum
 To address this challenge, this project focuses on analyzing product details from Zalora, a leading E-commerce platform in Singapore. This project aims to provide insights and analysis on sales trends, enabling consumers to navigate the crowded sales calendar and identify best times to purchase products based on historical data and sales patterns.
 
 ## Architecture Diagram
-<img src="images/E-Commerce Architecture Diagram.png" alt="architecture_diagram" width="500"/>
+<div align="center">
+  <img src="image.png" alt="Description" width="500"/>
+</div>
 
 ## Technologies
 
