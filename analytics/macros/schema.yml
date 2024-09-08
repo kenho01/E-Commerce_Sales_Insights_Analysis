@@ -1,0 +1,49 @@
+version: 2
+
+sources:
+  - name: staging
+    database: ecommerce-insights-435001 
+    schema: ecommerce_dataset 
+
+    tables:
+      - name: ods_ecommerce_products 
+
+models:
+  - name: stg_ods_ecommerce_products
+    description: ""
+    columns:
+      - name: unique_record_id
+        data_type: string
+        description: ""
+
+      - name: brand_name
+        data_type: string
+        description: ""
+
+      - name: sku
+        data_type: string
+        description: ""
+
+      - name: product_name
+        data_type: string
+        description: ""
+
+      - name: actual_price
+        data_type: numeric
+        description: ""
+
+      - name: discounted_price
+        data_type: numeric
+        description: ""
+
+      - name: discount
+        data_type: numeric
+        description: ""
+
+      - name: discount_percentage
+        data_type: numeric
+        description: ""
+
+      - name: record_capture_date
+        data_type: date
+        description: ""
