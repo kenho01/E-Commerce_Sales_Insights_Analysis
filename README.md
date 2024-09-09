@@ -29,7 +29,6 @@ To address this challenge, this project focuses on analyzing product details fro
   <img src="images/dashboard_sample_unpopulated.png" alt="dashboard_diagram" width="600"/>
 </div>
 
-
 ### Metrics
 - Metric 1: Average discount percentage applied across all products by brands
   - This metric helps in identifying the general fluctuation of discounts applied on different days, highlighting differences between sales events and normal days.
@@ -42,5 +41,5 @@ To address this challenge, this project focuses on analyzing product details fro
 - Metric 5: Ranking of events with biggest discounts
   - This metric ranks the average discount appplied to different brands based on different popular shopping events.
 
-## Acknowledgements
+## Acknowledgement
 - Zalora Webscraper: ianchute
