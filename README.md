@@ -7,7 +7,7 @@ However, the market has since evolved significantly, with a proliferation of fre
 This frequent and diverse array of sales events has made it difficult for consumers to determine the optimal time to make a purchase. 
 
 ## Objective
-To address this challenge, this project focuses on analyzing product details from Zalora, a leading E-commerce platform in Singapore. This project aims to provide insights and analysis on sales trends, enabling consumers to navigate the crowded sales calendar and identify best times to purchase products based on historical data and sales patterns.
+To address this challenge, this project focuses on analyzing product details from Zalora, a leading E-commerce platform in Singapore. This project aims to provide insights and analysis on product pricing trends, enabling consumers to navigate the crowded sales calendar and identify best times to purchase products based on historical data and sales patterns.
 
 ## Architecture Diagram
 
