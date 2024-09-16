@@ -23,10 +23,10 @@ To address this challenge, this project focuses on analyzing product details fro
 - Others: Docker
 
 ## Dashboard
-### This is a preliminary snippet of the final dashboard containing 2 days worth of data. More data are expected to arrive as the pipeline runs.
+### This is a preliminary snippet of the final dashboard containing 1 week worth of data. More data are expected to arrive as the pipeline runs.
 
 <div style="text-align: center;">
-  <img src="images/dashboard_sample_unpopulated.png" alt="dashboard_diagram" width="600"/>
+  <img src="images/dashboard_sample_1week.png" alt="dashboard_diagram" width="600"/>
 </div>
 
 ### Metrics
