@@ -3,3 +3,8 @@ ecommerce/
 .DS_Store
 *.pyc
 .env
+terraform/.terraform
+terraform.tfstate
+terraform.tfstate.backup
+terraform/.terraform.lock.gcl
+terraform/.terraform.lock.hcl
