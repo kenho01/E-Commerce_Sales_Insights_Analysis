@@ -23,10 +23,10 @@ To address this challenge, this project focuses on analyzing product details fro
 - Others: Docker
 
 ## Dashboard
-### This is a preliminary snippet of the final dashboard containing 1 week worth of data. More data are expected to arrive as the pipeline runs.
+Zalora products price analysis from 08 September 2024 - 12 October 2024.
 
 <div style="text-align: center;">
-  <img src="images/dashboard_sample_1week.png" alt="dashboard_diagram" width="600"/>
+  <img src="images/dashboard_completed.png" alt="dashboard_diagram" width="600"/>
 </div>
 
 ### Metrics
